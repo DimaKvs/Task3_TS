@@ -30,7 +30,7 @@ function displayPosts(postsArray: Array<Post>, container: HTMLDivElement){
 
 fetchData<Post>(url).then((data)=>{
     displayPosts(data, postContainer);
-    const newArr = updateObjectInArray<Post>(data, 104, newElementOfArray); //here I get new updated array
+    const newArr = updateObjectInArray<Post>(data, 1, newElementOfArray); //here I get new updated array
     setTimeout(()=>{                                                      //and display it on webpage, use setTimeout to see changes
         displayPosts(newArr, postContainer);
     }, 5000);
